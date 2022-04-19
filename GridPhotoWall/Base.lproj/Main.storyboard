@@ -1,24 +1,292 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Mft-jj-M83">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="jf-openhuninn-1.1.ttf">
+            <string>jf-openhuninn-1.1</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GridPhotoWall" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="bkP-Ak-PNI">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W9h-Q2-RkQ">
+                                <rect key="frame" x="107" y="284" width="200" height="72"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="W9h-Q2-RkQ" secondAttribute="height" multiplier="25:9" id="OmS-sl-5Pq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="35"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="戀戀淡水" backgroundImage="Tamsui">
+                                    <color key="titleColor" systemColor="tertiarySystemBackgroundColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="40"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="nextButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vF1-iQ-eEq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B4d-tu-TNu">
+                                <rect key="frame" x="107" y="590" width="200" height="72"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="B4d-tu-TNu" secondAttribute="height" multiplier="25:9" id="LRu-fd-7aQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="35"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="宿霧樂遊" backgroundImage="cebu">
+                                    <color key="titleColor" systemColor="systemGroupedBackgroundColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="40"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="nextButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vMR-A9-zW1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hCJ-pf-Etg">
+                                <rect key="frame" x="107" y="488" width="200" height="72"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="hCJ-pf-Etg" secondAttribute="height" multiplier="25:9" id="mR4-QD-4CF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="36"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="台灣之旅" backgroundImage="trip">
+                                    <color key="titleColor" systemColor="systemGroupedBackgroundColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="40"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="nextButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hnb-yN-A07"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="chL-wI-hYa">
+                                <rect key="frame" x="107" y="386" width="200" height="72"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="chL-wI-hYa" secondAttribute="height" multiplier="25:9" id="HRS-wH-SRj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="35"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="日常小事" backgroundImage="life">
+                                    <color key="titleColor" systemColor="systemGroupedBackgroundColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="40"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="nextButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="81N-Ki-kyx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tje-Nn-k50">
+                                <rect key="frame" x="133" y="692" width="148" height="53.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Tje-Nn-k50" secondAttribute="height" multiplier="25:9" id="Qdt-sT-5kS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="37"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="所有圖片">
+                                    <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="40"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="showAllImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oza-e5-Ko0"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5週年紀念牆" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PlL-oG-5t3">
+                                <rect key="frame" x="89" y="183" width="236" height="42"/>
+                                <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="42"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hCJ-pf-Etg" firstAttribute="top" secondItem="chL-wI-hYa" secondAttribute="bottom" constant="30" id="0EU-9j-IIJ"/>
+                            <constraint firstItem="PlL-oG-5t3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0jj-Xd-OE9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="B4d-tu-TNu" secondAttribute="bottom" constant="200" id="7D9-Vz-w9W"/>
+                            <constraint firstItem="W9h-Q2-RkQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="107" id="CWG-oP-LZ3"/>
+                            <constraint firstItem="W9h-Q2-RkQ" firstAttribute="top" secondItem="PlL-oG-5t3" secondAttribute="bottom" constant="59" id="E6i-2Z-feu"/>
+                            <constraint firstItem="chL-wI-hYa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="107" id="H1o-pM-7bp"/>
+                            <constraint firstAttribute="bottom" secondItem="bkP-Ak-PNI" secondAttribute="bottom" id="NGk-AW-jf4"/>
+                            <constraint firstItem="bkP-Ak-PNI" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Nhd-Xd-J6w"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="W9h-Q2-RkQ" secondAttribute="trailing" constant="107" id="P1x-z9-8E4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hCJ-pf-Etg" secondAttribute="trailing" constant="107" id="Pfn-9S-lvw"/>
+                            <constraint firstItem="hCJ-pf-Etg" firstAttribute="centerX" secondItem="PlL-oG-5t3" secondAttribute="centerX" id="TmX-GZ-63s"/>
+                            <constraint firstItem="chL-wI-hYa" firstAttribute="centerX" secondItem="PlL-oG-5t3" secondAttribute="centerX" id="XoJ-fl-Cqy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="B4d-tu-TNu" secondAttribute="trailing" constant="107" id="gCm-So-2T6"/>
+                            <constraint firstItem="Tje-Nn-k50" firstAttribute="centerX" secondItem="B4d-tu-TNu" secondAttribute="centerX" id="gd8-Pe-ppr"/>
+                            <constraint firstItem="B4d-tu-TNu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="107" id="hx5-IL-UnA"/>
+                            <constraint firstItem="B4d-tu-TNu" firstAttribute="centerX" secondItem="PlL-oG-5t3" secondAttribute="centerX" id="lzd-Zq-rwu"/>
+                            <constraint firstItem="chL-wI-hYa" firstAttribute="top" secondItem="W9h-Q2-RkQ" secondAttribute="bottom" constant="30" id="msA-tl-GyO"/>
+                            <constraint firstItem="Tje-Nn-k50" firstAttribute="top" secondItem="B4d-tu-TNu" secondAttribute="bottom" constant="30" id="nBR-xP-Bjc"/>
+                            <constraint firstItem="bkP-Ak-PNI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nkt-xb-Q7c"/>
+                            <constraint firstItem="bkP-Ak-PNI" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="oOz-3m-OVV"/>
+                            <constraint firstItem="W9h-Q2-RkQ" firstAttribute="centerX" secondItem="PlL-oG-5t3" secondAttribute="centerX" id="qaO-Mo-RN2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="chL-wI-hYa" secondAttribute="trailing" constant="107" id="rWq-JN-Ysc"/>
+                            <constraint firstItem="hCJ-pf-Etg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="107" id="viP-F1-Aao"/>
+                            <constraint firstItem="Tje-Nn-k50" firstAttribute="width" secondItem="Tje-Nn-k50" secondAttribute="height" multiplier="25:9" id="z6x-ZX-ygg"/>
+                            <constraint firstItem="B4d-tu-TNu" firstAttribute="top" secondItem="hCJ-pf-Etg" secondAttribute="bottom" constant="30" id="znj-ej-ydG"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="lY0-Zr-78g"/>
+                    <connections>
+                        <segue destination="9bu-jx-EKc" kind="show" identifier="showPhoto" destinationCreationSelector="showPhoto:" id="C1s-vq-f4N"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="939.13043478260875" y="55.580357142857139"/>
+        </scene>
+        <!--Photo Collection View Controller-->
+        <scene sceneID="Mz7-pc-QnM">
+            <objects>
+                <collectionViewController id="9bu-jx-EKc" customClass="PhotoCollectionViewController" customModule="GridPhotoWall" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="e0k-8B-BOE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="aub-ka-CTM">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoCollectionViewCell" id="7bK-AB-o62" customClass="PhotoCollectionViewCell" customModule="GridPhotoWall" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="eU4-nb-kEg">
+                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NJh-Bv-aqi">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="NJh-Bv-aqi" firstAttribute="top" secondItem="eU4-nb-kEg" secondAttribute="top" id="28l-Gl-6xG"/>
+                                        <constraint firstItem="NJh-Bv-aqi" firstAttribute="leading" secondItem="eU4-nb-kEg" secondAttribute="leading" id="4pm-ee-7Pg"/>
+                                        <constraint firstAttribute="bottom" secondItem="NJh-Bv-aqi" secondAttribute="bottom" id="63D-fU-QsU"/>
+                                        <constraint firstItem="NJh-Bv-aqi" firstAttribute="top" secondItem="eU4-nb-kEg" secondAttribute="top" id="8wo-Pb-VqQ"/>
+                                        <constraint firstAttribute="trailing" secondItem="NJh-Bv-aqi" secondAttribute="trailing" id="FSG-GL-TG8"/>
+                                        <constraint firstAttribute="trailing" secondItem="NJh-Bv-aqi" secondAttribute="trailing" id="JI2-gX-bo8"/>
+                                        <constraint firstItem="NJh-Bv-aqi" firstAttribute="leading" secondItem="eU4-nb-kEg" secondAttribute="leading" id="pIZ-Ui-SzF"/>
+                                        <constraint firstAttribute="bottom" secondItem="NJh-Bv-aqi" secondAttribute="bottom" id="wiB-Wb-914"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <connections>
+                                    <outlet property="photoImageView" destination="NJh-Bv-aqi" id="Q8z-zZ-EqT"/>
+                                    <segue destination="OBd-4e-8T8" kind="show" destinationCreationSelector="showDetail:" id="azt-zm-cjN"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="9bu-jx-EKc" id="CDc-Yf-fW3"/>
+                            <outlet property="delegate" destination="9bu-jx-EKc" id="bV9-Es-ymy"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="5LE-rw-l2l"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PuE-Ah-drb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1873.913043478261" y="55.580357142857139"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="VjT-tK-Gby">
+            <objects>
+                <viewController id="OBd-4e-8T8" customClass="DetailViewController" customModule="GridPhotoWall" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="piu-bd-Vxf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MMN-9O-7ej">
+                                <rect key="frame" x="0.0" y="88" width="414" height="720"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="eG5-ns-d9j"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="MMN-9O-7ej" firstAttribute="top" secondItem="eG5-ns-d9j" secondAttribute="top" id="2MM-0C-0KJ"/>
+                            <constraint firstItem="MMN-9O-7ej" firstAttribute="centerX" secondItem="piu-bd-Vxf" secondAttribute="centerX" id="HCZ-f8-k18"/>
+                            <constraint firstItem="eG5-ns-d9j" firstAttribute="trailing" secondItem="MMN-9O-7ej" secondAttribute="trailing" id="akb-ed-vTZ"/>
+                            <constraint firstItem="MMN-9O-7ej" firstAttribute="leading" secondItem="eG5-ns-d9j" secondAttribute="leading" id="e1u-DJ-MPl"/>
+                            <constraint firstItem="MMN-9O-7ej" firstAttribute="centerY" secondItem="piu-bd-Vxf" secondAttribute="centerY" id="sfm-ix-6ey"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="uM0-dy-KFC"/>
+                    <connections>
+                        <outlet property="imageView" destination="MMN-9O-7ej" id="Vus-HO-SWR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YBI-Jm-d7F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2754" y="56"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="DZ0-4N-1kt">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Mft-jj-M83" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WpO-ou-rDH">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="5BT-Q6-WmD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nD6-wp-TrY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="55.580357142857139"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Tamsui" width="1168" height="759"/>
+        <image name="background" width="2048" height="1536"/>
+        <image name="cebu" width="1024" height="768"/>
+        <image name="life" width="2048" height="1536"/>
+        <image name="trip" width="1024" height="768"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiarySystemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

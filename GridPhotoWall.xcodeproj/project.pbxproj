@@ -13,6 +13,11 @@
 		9E3783D4280C2F5D0045761F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E3783D2280C2F5D0045761F /* Main.storyboard */; };
 		9E3783D6280C2F5F0045761F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E3783D5280C2F5F0045761F /* Assets.xcassets */; };
 		9E3783D9280C2F5F0045761F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E3783D7280C2F5F0045761F /* LaunchScreen.storyboard */; };
+		9E3783E1280C49500045761F /* jf-openhuninn-1.1.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9E3783E0280C49500045761F /* jf-openhuninn-1.1.ttf */; };
+		9E3783E3280C518B0045761F /* PhotoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3783E2280C518B0045761F /* PhotoCollectionViewController.swift */; };
+		9E3783E5280C51D60045761F /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3783E4280C51D60045761F /* PhotoCollectionViewCell.swift */; };
+		9E3783E7280C557F0045761F /* loveWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3783E6280C557F0045761F /* loveWord.swift */; };
+		9E48803A280D61DC00F96A6A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E488039280D61DC00F96A6A /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		9E3783D5280C2F5F0045761F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9E3783D8280C2F5F0045761F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9E3783DA280C2F5F0045761F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9E3783E0280C49500045761F /* jf-openhuninn-1.1.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "jf-openhuninn-1.1.ttf"; sourceTree = "<group>"; };
+		9E3783E2280C518B0045761F /* PhotoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewController.swift; sourceTree = "<group>"; };
+		9E3783E4280C51D60045761F /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		9E3783E6280C557F0045761F /* loveWord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loveWord.swift; sourceTree = "<group>"; };
+		9E488039280D61DC00F96A6A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +70,13 @@
 				9E3783CE280C2F5D0045761F /* SceneDelegate.swift */,
 				9E3783D0280C2F5D0045761F /* ViewController.swift */,
 				9E3783D2280C2F5D0045761F /* Main.storyboard */,
+				9E488039280D61DC00F96A6A /* DetailViewController.swift */,
+				9E3783E6280C557F0045761F /* loveWord.swift */,
+				9E3783E4280C51D60045761F /* PhotoCollectionViewCell.swift */,
+				9E3783E2280C518B0045761F /* PhotoCollectionViewController.swift */,
 				9E3783D5280C2F5F0045761F /* Assets.xcassets */,
 				9E3783D7280C2F5F0045761F /* LaunchScreen.storyboard */,
+				9E3783E0280C49500045761F /* jf-openhuninn-1.1.ttf */,
 				9E3783DA280C2F5F0045761F /* Info.plist */,
 			);
 			path = GridPhotoWall;
@@ -126,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E3783D9280C2F5F0045761F /* LaunchScreen.storyboard in Resources */,
+				9E3783E1280C49500045761F /* jf-openhuninn-1.1.ttf in Resources */,
 				9E3783D6280C2F5F0045761F /* Assets.xcassets in Resources */,
 				9E3783D4280C2F5D0045761F /* Main.storyboard in Resources */,
 			);
@@ -139,8 +155,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E3783D1280C2F5D0045761F /* ViewController.swift in Sources */,
+				9E3783E5280C51D60045761F /* PhotoCollectionViewCell.swift in Sources */,
 				9E3783CD280C2F5D0045761F /* AppDelegate.swift in Sources */,
 				9E3783CF280C2F5D0045761F /* SceneDelegate.swift in Sources */,
+				9E3783E3280C518B0045761F /* PhotoCollectionViewController.swift in Sources */,
+				9E3783E7280C557F0045761F /* loveWord.swift in Sources */,
+				9E48803A280D61DC00F96A6A /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
